@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Oasis Infobyte Data Science Internship (OIBSIP)
 
 This repository contains all projects completed as part of the Oasis Infobyte Data Science Internship Program.
@@ -53,3 +54,26 @@ OIBSIP/
 ## Acknowledgement
 
 I would like to thank Oasis Infobyte for providing this internship opportunity and practical exposure to Data Science projects.
+=======
+# Oasis Infobyte Data Science Internship
+
+This repository contains all projects completed during the Oasis Infobyte Data Science Internship.
+
+## Tasks
+
+* Task 2 - Unemployment Analysis
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* Google Colab
+
+## Author
+
+Bhvya Vaish
+>>>>>>> 9ecbad8 (Added README and requirements for Car Price Prediction)
