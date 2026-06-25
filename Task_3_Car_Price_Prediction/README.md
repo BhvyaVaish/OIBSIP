@@ -6,6 +6,12 @@ Developed as part of the **Oasis Infobyte Data Science Internship (OIBSIP)**.
 
 ---
 
+#Deployed on
+
+https://car-price-predictor-x492.onrender.com/
+
+---
+
 # Features
 
 * Modern responsive UI
