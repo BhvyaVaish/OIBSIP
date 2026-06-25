@@ -1,4 +1,5 @@
-# 🚗 Car Price Predictor
+# CarWorth
+AI Powered Car Price Estimation Web Application
 
 A modern Machine Learning web application that predicts the selling price of used cars based on various vehicle attributes.
 
