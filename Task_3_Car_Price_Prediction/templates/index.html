@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Car Price Predictor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(circle at top left,#1e3a8a,#0a0a0a 40%),
+    radial-gradient(circle at bottom right,#2563eb,#000000 40%);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+.container{
+
+    width:100%;
+    max-width:550px;
+
+    background:rgba(15,15,15,0.95);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.5);
+}
+
+.logo{
+
+    width:80px;
+    height:80px;
+
+    border-radius:20px;
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:36px;
+
+    margin:auto;
+    margin-bottom:20px;
+}
+
+h1{
+
+    color:white;
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    margin-bottom:35px;
+
+    line-height:1.6;
+}
+
+.stats{
+
+    display:flex;
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-bottom:35px;
+}
+
+.stat-card{
+
+    flex:1;
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    padding:15px;
+
+    border-radius:16px;
+
+    text-align:center;
+}
+
+.stat-card h3{
+
+    color:#60a5fa;
+
+    margin-bottom:5px;
+}
+
+.stat-card p{
+
+    color:#94a3b8;
+
+    font-size:14px;
+}
+
+label{
+
+    display:block;
+
+    color:white;
+
+    margin-bottom:8px;
+
+    margin-top:20px;
+
+    font-weight:500;
+}
+
+input,
+select{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:1px solid #2d3748;
+
+    background:#111827;
+
+    color:white;
+
+    font-size:15px;
+
+    transition:0.3s;
+}
+
+input:focus,
+select:focus{
+
+    outline:none;
+
+    border-color:#3b82f6;
+
+    box-shadow:
+    0 0 15px rgba(59,130,246,0.25);
+}
+
+button{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:white;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #3b82f6
+    );
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 12px 30px rgba(59,130,246,0.35);
+}
+
+.footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#64748b;
+
+    font-size:13px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">🚘</div>
+
+    <h1>Car Price Predictor</h1>
+
+    <p class="subtitle">
+        AI-powered vehicle valuation system using Machine Learning
+    </p>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>92.3%</h3>
+            <p>Accuracy</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>301</h3>
+            <p>Cars Trained</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>RF</h3>
+            <p>Model</p>
+        </div>
+
+    </div>
+
+    <form action="/predict" method="POST">
+
+        <label>Present Price (Lakhs)</label>
+        <input type="number" step="0.01" name="present_price" required>
+
+        <label>Driven Kilometers</label>
+        <input type="number" name="driven_kms" required>
+
+        <label>Previous Owners</label>
+        <input type="number" name="owner" required>
+
+        <label>Fuel Type</label>
+        <select name="fuel_type">
+
+            <option>Petrol</option>
+            <option>Diesel</option>
+
+        </select>
+
+        <label>Seller Type</label>
+        <select name="seller_type">
+
+            <option>Dealer</option>
+            <option>Individual</option>
+
+        </select>
+
+        <label>Transmission</label>
+        <select name="transmission">
+
+            <option>Manual</option>
+            <option>Automatic</option>
+
+        </select>
+
+        <button type="submit">
+            Predict Price
+        </button>
+
+    </form>
+
+    <div class="footer">
+        Built with Flask • Scikit-Learn • Random Forest
+    </div>
+
+</div>
+
+</body>
+</html>

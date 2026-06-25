@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Oasis Infobyte Data Science Internship (OIBSIP)
 
 This repository contains all projects completed as part of the Oasis Infobyte Data Science Internship Program.
